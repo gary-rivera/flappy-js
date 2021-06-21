@@ -1,35 +1,4 @@
 <body style="height: 100vh; background: #111; text-align: center">
   <canvas id="c" width="400" height="400"></canvas>
-  <script>
-    let context = c.getContext('2d');
-    const bird = new Image();
-    bird.src = 'bird.png';
-    birdX = birdDY = score = bestScore = 0;
-    interval = birdSize = pipeWidth = topPipeBottomY = 24; // 1000/24 ~ 42 fps
-    birdY = pipeGap = 200;
-    canvasSize = pipeX = 400;
-
-    c.onclick = () => (birdDY = 9);
-
-    setInterval(() => {
-      context.fillStyle = 'skyblue';
-      context.fillRect(0, 0, canvasSize, canvasSize); // render sky background
-      birdY -= birdDY -= 0.5; // vertical speed downward a.k.a - gravity. Modfiy to alter difficulty
-      context.drawImage(bird, birdX, birdY, birdSize * (524 / 374), birdSize); // render bird image
-      context.fillStyle = 'green';
-      pipeX -= 8; // move top pipe left
-      pipeX < -pipeWidth &&
-        ((pipeX = canvasSize), (topPipeBottomY = pipeGap * Math.random())); // randomize gap between pipe
-      context.fillRect(pipeX, 0, pipeWidth, topPipeBottomY); //Draw top pipe
-      context.fillRect(pipeX, topPipeBottomY + pipeGap, pipeWidth, canvasSize); // draw bottom pipe
-      context.fillStyle = 'black';
-      context.fillText(score++, 9, 25);
-      bestScore = bestScore < score ? score : bestScore;
-      context.fillText(`Best: ${bestScore}`, 9, 50);
-      (((birdY < topPipeBottomY || birdY > topPipeBottomY + pipeGap) &&
-        pipeX < birdSize * (524 / 374)) ||
-        birdY > canvasSize) &&
-        ((birdDY = 0), (birdY = 200), (pipeX = canvasSize), (score = 0)); // bird died - reset
-    }, interval);
-  </script>
+  <script src="script.js"></script>
 </body>
