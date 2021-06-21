@@ -1,12 +1,12 @@
 let context = c.getContext('2d');
 const bird = new Image();
-bird.src = 'bird.png';
+bird.src = 'flappy-bird.png';
 birdX = birdDY = score = bestScore = 0;
 interval = birdSize = pipeWidth = topPipeBottomY = 24; // 1000/24 ~ 42 fps
 birdY = pipeGap = 200;
 canvasSize = pipeX = 400;
 
-c.onclick = () => (birdDY = 9); // click === bird image scales up - modify to alter bird gravity
+c.onclick = () => (birdDY = 10); // click === bird image scales up - modify to alter bird gravity
 
 setInterval(() => {
   context.fillStyle = 'skyblue'; //background styling
