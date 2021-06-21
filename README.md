@@ -4,7 +4,7 @@ The classic mobile game in vanilla JS but done in less than 30 lines of code (mi
 
 ## Usage
 
-Click anywhere on the canvas to have flappy flutter up. The goal is to not clip any of the pipes. Good luck!
+Click anywhere on the canvas to have flappy flutter up. The goal is to not clip any of the pipes so be careful!
 
 ## Contributing
 
