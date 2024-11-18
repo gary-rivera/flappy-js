@@ -2,7 +2,7 @@ let context = c.getContext('2d');
 const bird = new Image();
 bird.src = 'gary-sprite.png';
 birdX = birdDY = score = bestScore = 0;
-let birdSize = 60;
+let birdSize = 45;
 interval = pipeWidth = topPipeBottomY = 24; // 1000/24 ~ 42 fps // mother of pearl, what was i thinking with this
 birdY = pipeGap = 200;
 canvasSize = pipeX = 400;
